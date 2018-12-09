@@ -20,13 +20,6 @@ namespace GetTTS
             client.Headers["Accept"] = "*/*";
             client.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
                 "AppleWebKit/537.36 (KHTML, like Gecko) " + "Chrome/70.0.3538.110 Safari/537.36";
-            // client.DownloadProgressChanged += DownloadProgressChanged;
-
-            //client.DownloadFileCompleted += (object sender, AsyncCompletedEventArgs e) =>
-            //{
-            //    Console.WriteLine("Download finished!");
-            //    downloadFinished(word, 1);
-            //};
 
             Uri wordUri = new Uri(String.Format("http://dict.youdao.com/dictvoice?audio={0}&type={1}", word.Word, word.Type));
             try

@@ -27,10 +27,6 @@ namespace GetTTS
         public MainWindow()
         {
             InitializeComponent();
-
-            //TTSWord ttsWord = new TTSWord("you", 1);
-
-            //WordList.Items.Add(ttsWord);
         }
 
         private void DownloadButton_Click(object sender, RoutedEventArgs e)
@@ -66,7 +62,6 @@ namespace GetTTS
         private void DownloadAgainButton_Click(object sender, RoutedEventArgs e)
         {
             TTSWord ttsWord = WordList.SelectedItem as TTSWord;
-            // ttsWord.Status = 2;
             TTSClient.Download(ttsWord, this.DownloadFinished);
             
         }
