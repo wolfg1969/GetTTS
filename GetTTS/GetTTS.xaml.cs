@@ -70,7 +70,9 @@ namespace GetTTS
         {
             TTSWord ttsWord = WordList.SelectedItem as TTSWord;
             mediaPlayer.Open(new Uri(ttsWord.AudioFileName));
+            mediaPlayer.MediaEnded += delegate { mediaPlayer.Close(); };
             mediaPlayer.Play();
+           
         }
 
         public void DownloadFinished(TTSWord word, int result)

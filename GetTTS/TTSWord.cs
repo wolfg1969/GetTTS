@@ -19,7 +19,7 @@ namespace GetTTS
         {
             Word = word;
             Type = type;
-            AudioFileName = Path.Combine(TTSWord.GetBaseDirectory(), String.Format("{0}.mp3", Word));
+            AudioFileName = Path.Combine(TTSWord.GetBaseDirectory(), String.Format("{0}_{1}.mp3", this.Word, this.TypeDesc));
         }
         public String Word { get; set; }
         public int Type { get; set;  }
